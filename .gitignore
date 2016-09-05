@@ -7,6 +7,9 @@
 # Ignore bundler config.
 /.bundle
 
+#Ignore Heroku env file
+/config/heroku_env.rb
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
