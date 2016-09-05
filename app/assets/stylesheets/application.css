@@ -135,7 +135,7 @@ a:hover
 .indexRecipeCard
 {
 	border:none;
-  margin:20px 5px 20px 5px;
+  margin:5px 5px 5px 5px;
 	padding:0px 0px 15px 0px; 
 	background-color:white;
   display:inline-block;
@@ -149,7 +149,7 @@ a:hover
   font-family: Open Sans, Arial;
   color:#555;
   font-weight:bold;
-  font-size:1.5em;
+  font-size:1.1em;
 	line-height:1em;
   margin-top:10px;
   margin-bottom:10px;
