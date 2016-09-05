@@ -49,27 +49,25 @@
 <% else %>
 
 	<!-- Recipe Listing -->
-	<div class="row">
+	<div class="card-columns">
 
 		<% @recipes.each do |course| %>
 
-			<div class ="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+			<div class = "card indexRecipeCard shadowEffect">
 
-				<div class="row">  
-					<div class="indexRecipeCard shadowEffect" >
-
-						<!-- recipe name -->
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 indexRecipeTitle">
-
-							<%= link_to(course["title"],course["f2f_url"])%>	
-
-						</div>
-
-						<!-- image -->
+				<!-- image -->
 						  
-						<%= link_to(image_tag(course["image_url"], class: "img-responsive text-center"), course["f2f_url"])%>						
-					</div>  
+				<%= link_to(image_tag(course["image_url"], class: "card-img-top img-responsive text-center", style: "width:100%"), course["f2f_url"])%>			
+					
+				<!-- recipe name -->
+				<div class="card-block indexRecipeTitle text-xs-center">
+
+					<%= link_to(course["title"],course["f2f_url"])%>	
+
 				</div>
+
+									
+			
 			</div> 
 		
 		<% end %>
