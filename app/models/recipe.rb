@@ -6,7 +6,6 @@ class Recipe
 	format :json
 
 	def self.for term
-		puts ENV["FOOD2FORK_KEY"].inspect
 		get("/search", query: { q: term})["recipes"]
 	end	
 
