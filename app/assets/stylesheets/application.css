@@ -20,8 +20,12 @@ body
 	font-family: Open Sans, Arial;
 	font-size:1.2em;
 	background-color: #EEE;
+  background-image: url("http://i.imgur.com/E1iJPGa.jpg");
+  /*
+  background-image: url("http://i.imgur.com/oOrQDVh.jpg");
+  background-image: url("http://i.imgur.com/4qRZgKp.jpg");
   background-image: url("http://i.imgur.com/xA80pUb.jpg");
-
+  */
 }
 
 footer { margin-top: 100px; }
@@ -136,21 +140,21 @@ a:hover
 .indexRecipeCard
 {
 	border:none;
-  margin:5px 5px 5px 5px;
-	padding:0px 0px 15px 0px; 
+  margin:10px 10px 10px 10px;
+	padding:0px 0px 0px 0px; 
 	background-color:white;
   display:inline-block;
   -webkit-border-radius:5px;
   -moz-border-radius: 5px;
-  border-radius:5px;   
+  border-radius:5px 5px 0px 0px;   
 }
 
 .indexRecipeTitle
 {	
   font-family: Open Sans, Arial;
-  color:#555;
+  color:#000;
   font-weight:bold;
-  font-size:1.1em;
+  font-size:1em;
 	line-height:1em;
   margin-top:10px;
   margin-bottom:10px;
@@ -160,7 +164,7 @@ a:hover
 .indexRecipeTitle a
 {
   
-  color:#555;
+  color:#000;
 
 }
 
