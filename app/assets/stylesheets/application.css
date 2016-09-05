@@ -42,10 +42,11 @@ a:hover
 
 }
 
-.spacerTop
-{
-	padding-top:50px;
-}
+.spacerTop10px {margin-top:10px;}
+.spacerTop50px {margin-top:50px;}
+
+
+.textField {height:1.2em;}
 
 .btnRed
 {

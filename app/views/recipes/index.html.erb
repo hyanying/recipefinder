@@ -2,13 +2,45 @@
 <div class="container-fluid">
 	<p id="notice"><%= notice %></p>
 
-	<!-- Title -->
+	
 	<div class="row">
-		<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-			<h1>Searching for - <%= @search_term %> </h1>
-			<p>Powered by Food2Fork.com</p>
+
+		<!-- Title -->
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<h1>Recipe Search</h1>
+			Powered by Food2Fork.com
 		</div>
 
+
+
+		<!-- Search -->
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+			<!-- search field -->
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacerTop10px">
+				<input type = "text" class="form-control" placeholder="Enter your ingredients: chicken asparagus paprika etc">
+			</div>
+
+			<!-- spacer -->
+			<div class="col-lg-7 col-md-6 col-sm-0 col-xs-0 spacerTop10px">
+
+			</div>	
+
+			<!-- search button -->
+			<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 spacerTop10px">
+				<button type="submit" class="btnRed btn btn-block">Search For Recipes</button>
+
+			</div>	
+
+		</div>
+
+	</div>	
+
+	<br/><br/>
+	<div class="row">
+		<div class="col-lg-12 col-md- col-sm-12 col-xs-12 text-center">
+			<strong><h3>Search Results For "<%= @search_term %>" </h3></strong>
+		</div>
 	</div>
 
 <% if (@recipes.nil? or @recipes == []) %>
@@ -21,7 +53,7 @@
 
 		<% @recipes.each do |course| %>
 
-			<div class ="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+			<div class ="col-lg-3 col-md-4 col-sm-6 col-xs-12">
 
 				<div class="row">  
 					<div class="indexRecipeCard shadowEffect" >

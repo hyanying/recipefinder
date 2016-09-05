@@ -1,6 +1,12 @@
 class RecipesController < ApplicationController
+
+  include RecipesHelper	
+
   def index
-  	@search_term = params[:looking_for] || 'chocolate'
-  	@recipes = Recipe.for(@search_term)
+
+  	search_item = 'beef'
+
+  	searchRecipes(search_item)
+
   end
 end
