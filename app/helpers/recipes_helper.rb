@@ -1,13 +1,5 @@
 module RecipesHelper
 
-	#def searchRecipes(search_item)
-
-		#@search_term = params[:looking_for] || 'chicken'
-		#@search_term = search_item
-  		#@recipes = Recipe.for(@search_term)
-
-	#end
-
 	def generateFood
 	
 		food = ['beef',
@@ -69,7 +61,7 @@ module RecipesHelper
 				'artichoke']
 
 	
-		selected_food = food[rand(0..(food.length))]
+		selected_food = food[rand(0..(food.length-1))]
 				
 		return selected_food;		
 

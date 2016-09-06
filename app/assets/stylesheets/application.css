@@ -17,7 +17,7 @@
 
 body
 { 
-	font-family: Open Sans, Arial;
+	font-family: 'Raleway', sans-serif, 'Open Sans', Arial;
 	font-size:1.2em;
 	background-color: #EEE;
   background-image: url("http://i.imgur.com/oBlgekE.png");
@@ -33,16 +33,12 @@ footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }
 
-h1 
-{
-  /*font-family:'Atma',cursive;*/
-}
+
 
 a {color:black;}
 
 a:hover
 {
-  /*background-color:rgba(255,0,0,1.0);*/
   background-color:transparent;
   text-decoration: none;
   color:black;
@@ -141,6 +137,10 @@ a:hover
 
 /* Recipes Listing /////////////////////////////////////////// */
 
+.indexSubtitle 
+{
+  font-size:0.7em;
+}
 
 .indexAddRecipes{float:right; text-align:right;}
 
@@ -158,13 +158,12 @@ a:hover
 
 .indexRecipeTitle
 {	
-  font-family: Open Sans, Arial;
   color:#000;
   font-size:0.8em;
 	line-height:1em;
   margin-top:10px;
   margin-bottom:10px;
-  text-align: left;  
+  text-align: left; 
 }
 
 .indexRecipeTitle a
