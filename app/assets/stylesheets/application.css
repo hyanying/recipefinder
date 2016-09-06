@@ -20,8 +20,9 @@ body
 	font-family: Open Sans, Arial;
 	font-size:1.2em;
 	background-color: #EEE;
-  background-image: url("http://i.imgur.com/E1iJPGa.jpg");
+  background-image: url("http://i.imgur.com/oBlgekE.png");
   /*
+  background-image: url("http://i.imgur.com/E1iJPGa.jpg");
   background-image: url("http://i.imgur.com/oOrQDVh.jpg");
   background-image: url("http://i.imgur.com/4qRZgKp.jpg");
   background-image: url("http://i.imgur.com/xA80pUb.jpg");
@@ -37,6 +38,8 @@ h1
   /*font-family:'Atma',cursive;*/
 }
 
+a {color:black;}
+
 a:hover
 {
   /*background-color:rgba(255,0,0,1.0);*/
@@ -46,9 +49,13 @@ a:hover
 
 }
 
-.spacerTop10px {margin-top:10px;}
-.spacerTop50px {margin-top:50px;}
+.spacerTop10px {padding-top:10px;}
+.spacerTop20px {padding-top:20px;}
+.spacerTop30px {padding-top:30px;}
+.spacerTop50px {padding-top:50px;}
+.spacerBottom20px {padding-bottom:20px;}
 
+.width-100-percent {width:100%;}
 
 .textField {height:1.2em;}
 

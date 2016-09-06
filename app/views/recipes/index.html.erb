@@ -3,7 +3,7 @@
 	<p id="notice"><%= notice %></p>
 
 	
-	<div class="row">
+	<div class="row spacerTop10px">
 
 		<!-- Title -->
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -16,30 +16,35 @@
 		<!-- Search -->
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-			<!-- search field -->
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacerTop10px">
-				<input type = "text" class="form-control" placeholder="Enter your ingredients: chicken asparagus paprika etc">
-			</div>
+			<%= form_tag @recipe do%>
 
-			<!-- spacer -->
-			<div class="col-lg-7 col-md-6 col-sm-0 col-xs-0 spacerTop10px">
+				<!-- search field -->
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 spacerTop10px">				
 
-			</div>	
+						<%= text_field_tag :looking_for, nil, placeholder: "Enter your ingredients: chicken asparagus paprika etc", class: "form-control" %>
+					
+				</div>
 
-			<!-- search button -->
-			<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 spacerTop10px">
-				<button type="submit" class="btnRed btn btn-block">Search For Recipes</button>
+				<!-- spacer -->
+				<div class="col-lg-7 col-md-4 col-sm-0 col-xs-0 spacerTop10px">
 
-			</div>	
+				</div>	
+
+				<!-- search button -->
+				<div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 spacerTop10px">
+					<%= submit_tag("Search For Recipes", :class=>"btnRed btn btn-block") %>
+
+				</div>	
+
+			<% end %>
 
 		</div>
 
 	</div>	
 
-	<br/><br/>
 	<div class="row">
-		<div class="col-lg-12 col-md- col-sm-12 col-xs-12 text-center">
-			<strong><h3>Search Results For "<%= @search_term %>" </h3></strong>
+		<div class="col-lg-12 col-md- col-sm-12 col-xs-12 text-xs-center spacerTop30px">
+			<strong><h4>Search results for "<%= @search_term %>" </h4></strong>
 		</div>
 	</div>
 
@@ -49,7 +54,7 @@
 <% else %>
 
 	<!-- Recipe Listing -->
-	<div class="card-columns">
+	<div class="card-columns text-xs-center">
 
 		<% @recipes.each do |course| %>
 
@@ -57,12 +62,12 @@
 
 				<!-- image -->
 						  
-				<%= link_to(image_tag(course["image_url"], class: "card-img-top img-responsive text-center", style: "width:100%"), course["f2f_url"])%>			
+				<%= link_to(image_tag(course["image_url"], class: "card-img-top img-responsive text-center width-100-percent"), course["source_url"],:target => "_blank")%>			
 					
 				<!-- recipe name -->
 				<div class="card-block indexRecipeTitle text-xs-center">
 
-					<%= link_to(course["title"],course["f2f_url"])%>	
+					<%= link_to(course["title"].html_safe,course["source_url"], :target => "_blank")%>	
 
 				</div>
 

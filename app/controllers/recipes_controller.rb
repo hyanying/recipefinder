@@ -4,9 +4,11 @@ class RecipesController < ApplicationController
 
   def index
 
-  	search_item = 'beef'
+  	@search_term = params[:looking_for] || generateFood()
+  	@recipes = Recipe.for(@search_term)
 
-  	searchRecipes(search_item)
+  	#search_item = generateFood()
+  	#searchRecipes(search_item)
 
   end
 end
